@@ -13,7 +13,7 @@ faker
 celery
 redis
 django-celery-beat
-sentry-sdk[django]
+# sentry-sdk[django]
 # production
 gunicorn
 django-cors-headers
