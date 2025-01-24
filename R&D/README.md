@@ -7,48 +7,16 @@
 - Python 3.10 یا بالاتر
 - Django 4.0 یا بالاتر
 - PostgreSQL (یا پایگاه داده‌ای دیگر)
-- pip
+- docker
 
-## نصب
-
-1. **کلون کردن مخزن:**
-   ```bash
-   git clone https://github.com/faridhaavasi/Optimal-structure-of-Django-apps.git
-   cd Optimal-structure-of-Django-apps
-   ```
-
-2. **ایجاد محیط مجازی:**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # برای سیستم‌های UNIX
-   # یا 
-   venv\Scripts\activate  # برای ویندوز
-   ```
-
-3. **نصب وابستگی‌ها:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **تنظیم پایگاه داده:**
-   - اطمینان حاصل کنید که اطلاعات پایگاه داده در `settings.py` به‌درستی تنظیم شده است.
-   - پایگاه داده را مایگریت دهید:
-   ```bash
-   python manage.py migrate
-   ```
-
-5. **اجرای سرور:**
-   ```bash
-   python manage.py runserver
-   ```
 
 ## اصول طراحی و ساختار
 
-### 5.1 نام‌گذاری کلاس‌ها و توابع
+### 1 نام‌گذاری کلاس‌ها و توابع
 - نام کلاس‌ها باید به صورت PascalCase (نام بزرگ در ابتدا) باشد.
 - نام توابع باید به صورت snake_case (نام‌های کوچک با زیرخط) نوشته شوند.
 
-### 5.2 استفاده از BaseUserModel
+### 2 استفاده از BaseUserModel
 یکی از مهم‌ترین نکات در طراحی اپلیکیشن‌های Django این است که همیشه کلاس مدل کاربر (User) باید از `AbstractBaseUser` یا یک مدل پایه مانند `BaseUserModel` مشتق شده باشد. این کار به شما اجازه می‌دهد تا قابلیت‌های سفارشی‌سازی بیشتری نسبت به کاربران داشته باشید. 
 
 **مثال:**
@@ -63,7 +31,7 @@ class CustomUser(AbstractBaseUser):
     REQUIRED_FIELDS = ['username']
 ```
 
-### 5.3 ساختار دایرکتوری
+### 3 ساختار دایرکتوری
 یک ساختار مناسب به شما کمک می‌کند تا کدهای خود را بهتر مدیریت کنید. یک ساختار مثالی:
 ```plaintext
 myproject/
