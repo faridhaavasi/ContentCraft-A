@@ -40,7 +40,7 @@ myproject/
 │   ├── users/                 # اپلیکیشن مدیریت کاربران
 │   ├── products/              # اپلیکیشن مدیریت محصولات
 │
-├── config/                    # پیکربندی اصلی (settings, urls)
+├── core/                    # پیکربندی اصلی (settings, urls)
 │   ├── settings.py            # تنظیمات پروژه
 │   ├── urls.py                # آدرس‌های URL اصلی
 │
